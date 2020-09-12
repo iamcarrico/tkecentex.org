@@ -1,0 +1,42 @@
+////////////////////////
+// Style File
+//
+// This file gets turned into style.css. This file should really hold nothing except for imports of your base, global, and design partials.
+////////////////////////
+
+////////////////////////
+// Base Import
+////////////////////////
+@import 'config/config';
+
+////////////////////////
+// Import Global Stylings
+////////////////////////
+@import 'global/normalize';
+@import 'global/global';
+@import 'global/extendables';
+@import 'global/type';
+@import 'global/fonts';
+@import 'global/jarallax';
+
+////////////////////////
+// Import Design Stylings
+////////////////////////
+@import 'design/container';
+@import 'design/nav';
+@import 'design/donations';
+@import 'design/presidents';
+@import 'design/button';
+@import 'design/livestream';
+@import 'design/media';
+@import 'design/donation_form';
+@import 'design/checkbox';
+@import 'design/about';
+@import 'design/social';
+@import 'design/footer';
+@import 'design/modal';
+
+////////////////////////
+// Import print
+////////////////////////
+@import 'print';

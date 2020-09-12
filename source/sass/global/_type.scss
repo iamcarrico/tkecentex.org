@@ -1,0 +1,101 @@
+/**
+* Typography: Headings, body text, lists, code, and more for a versatile and durable typography system.
+*/
+
+body {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $black;
+  font-family: $roboto;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: $roboto-condensed;
+  font-weight: bold;
+  color: $darker-red;
+}
+
+h1 {
+  font-size: 1.4em;
+  text-align: center;
+  margin-bottom: 1.5em;
+  text-transform: uppercase;
+
+  @media (min-width: 334px) {
+    font-size: 1.8em;
+  }
+
+  @media (min-width: 456px) {
+    font-size: 2.5em;
+  }
+
+  @media (min-width: 700px) and (max-width: 888px) {
+    font-size: 1.9em;
+  }
+
+
+  &:after {
+    // The width of that HR like thing.
+    $width: 60%;
+
+    background: none repeat scroll 0 0 $darker-red;
+    bottom: -10px;
+    content: "";
+    display: block;
+    height: 4px;
+    position: relative;
+    left: 10%;
+    width: 80%;
+
+    @media (min-width: 500px) {
+      left: 50%;
+      margin-left: -200px;
+      width: 400px;
+    }
+  }
+}
+
+p {
+  margin-top: 0;
+}
+
+.indent {
+  margin-left: 3em;
+}
+
+.small {
+  font-size: .8em;
+}
+
+
+// Links
+//
+// The order of link states are based on Eric Meyer's article:
+// http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
+a {
+  text-decoration: none;
+  transition: color .3s;
+  color: $link;
+
+  &:link {
+    color: $link;
+  }
+
+  &:visited {
+    color: $visited;
+  }
+
+  &:hover, &:focus {
+    color: mix(#000, $link, 50%);
+  }
+
+  &:active, &.active {
+
+  }
+}
+
+// Remove text-shadow in selection highlight: h5bp.com/i
+// These selection declarations have to be separate
+::-moz-selection { background: $selection-bg; color: $selection; text-shadow: none; }
+::selection { background: $selection-bg; color: $selection; text-shadow: none; }

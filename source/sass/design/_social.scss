@@ -1,0 +1,17 @@
+.social-buttons {
+  text-align: center;
+
+  > a {
+    margin-right: 1em;
+  }
+
+  .twitter-intent img {
+    width: 28px;
+    vertical-align: top;
+  }
+
+  .facebook-share img {
+    width: 16px;
+    margin-right: 5px;
+  }
+}

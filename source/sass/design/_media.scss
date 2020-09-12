@@ -1,0 +1,17 @@
+.media {
+
+  &--release {
+    margin-bottom: 3em;
+
+    p {
+      margin-left: 3em;
+    }
+  }
+
+  .donation-button {
+    margin: 3em auto 0;
+    display: block;
+    width: 150px;
+    text-align: center;
+  }
+}

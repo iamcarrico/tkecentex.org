@@ -1,0 +1,32 @@
+.footer {
+  background-color: $america-red;
+  color: white;
+  padding-top: 1em;
+  text-align: center;
+
+  .container {
+    padding: 0 1em;
+  }
+
+  h1, h2, h3, h4, h5, a {
+    color: $grey;
+    margin: 0;
+  }
+
+  p {
+    margin-bottom: .5em;
+  }
+
+
+  &--copyright {
+    background-color: darken($darker-red, 15%);
+
+    font-size: .8em;
+    padding: 1em;
+
+    p {
+      margin: 0;
+    }
+  }
+
+}

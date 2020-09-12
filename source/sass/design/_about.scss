@@ -1,0 +1,61 @@
+.about {
+
+  &--columns {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -3em;
+  }
+
+  &--container {
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    width: 100%;
+    padding: 0 1.5em;
+
+    img {
+      width: 20%;
+      max-width: 107px;
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+
+    p {
+      margin: 0 0 0 .3em;
+
+      @media (min-width: 574px) {
+        margin: 0 0 0 .8em;
+      }
+    }
+  }
+
+
+
+  @media (min-width: 680px) {
+    &--columns {
+
+    }
+
+    &--container {
+      width: 50%;
+    }
+  }
+
+  @media (min-width: 988px) {
+    &--columns {
+      width: 120%;
+      margin-left: -10%;
+    }
+
+    &--container {
+    }
+  }
+
+  .donation-button {
+    margin: 0 auto;
+    width: 200px;
+    display: block;
+    text-align: center;
+  }
+}

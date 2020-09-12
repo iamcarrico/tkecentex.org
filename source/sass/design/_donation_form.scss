@@ -1,0 +1,57 @@
+
+.donation-form {
+  border: 1px solid $grey;
+  padding: 1em;
+
+  input[type="number"],
+  input[type="text"] {
+    display: block;
+    width: 80%;
+    margin: 0 auto 1em;
+    height: 2em;
+    text-align: center;
+    font-size: 1.3em;
+  }
+
+
+  .donation-form__donation-wrapper {
+    position: relative;
+  }
+
+  .donation-form__dollar {
+    position: absolute;
+    top: 10px;
+    left: 15%;
+  }
+
+  .donation-form__match-wrapper input {
+    font-size: .8em;
+    margin-bottom: 0;
+  }
+
+  .donation-form__designation-wrapper select {
+    padding: .75em 1em;
+    width: 80%;
+    font-size: 0.7em;
+    appearance: none;
+    text-align: center;
+    border-radius: 3px;
+    border: none;
+    background-color: $america-blue;
+    color: white;
+
+    + label {
+      display: block;
+    }
+  }
+
+  .donation-form-block {
+    margin-bottom: 1em;
+  }
+
+  .donation-submit {
+    margin: 0 .5em .5em .5em;
+  }
+
+
+}

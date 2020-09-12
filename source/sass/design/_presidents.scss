@@ -1,0 +1,52 @@
+
+.presidents-wrapper {
+  position: relative;
+
+
+  .president img {
+
+  }
+
+  .logo-wrapper {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+
+    .logo-and-donations {
+      width: 100%;
+      position: absolute;
+      bottom: 4%;
+    }
+
+    .thank-you-text {
+      display: none;
+
+      @media (min-width: 700px) {
+        display: block;
+        color: white;
+        line-height: 1.4;
+        max-width: 800px;
+        margin: 0 auto 1em;
+        background-color: rgba(0,0,0,.6);
+        padding: .5em;
+      }
+    }
+
+    .logo {
+      max-width: 200px;
+      width: 50%;
+      filter: drop-shadow(0px 0px 9px #000000);
+    }
+
+    .donation-button {
+        display: block;
+        width: 150px;
+        margin: 0 auto;
+        line-height: 1.4em;
+
+      @media (max-width: 677px) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.button,
+a.button,
+button {
+  background-color: $america-red;
+  border-radius: 5px;
+  padding: .3em .8em;
+  color: white;
+  font-size: 1.3em;
+  cursor: pointer;
+
+  border:none;
+
+  &.facebook-share {
+    background-color: $facebook-blue;
+
+  }
+
+  &.twitter-intent {
+    background-color: $twitter-blue;
+  }
+}

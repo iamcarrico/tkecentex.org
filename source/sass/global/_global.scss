@@ -1,0 +1,19 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+.grey-background {
+  background-color: $grey;
+}
+
+.no-lineheight {
+  line-height: 0;
+}
+
+body {
+  margin-top: $nav-item-height;
+}

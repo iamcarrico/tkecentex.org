@@ -1,0 +1,19 @@
+.gap {
+  padding: 1em;
+  background-color: white;
+
+  @media (min-width: 468px) {
+    padding: 1.5em;
+  }
+
+  @media (min-width: 623px) {
+    padding: 3em;
+  }
+
+}
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}

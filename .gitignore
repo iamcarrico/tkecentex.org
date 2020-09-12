@@ -1,0 +1,9 @@
+# Node things
+node_modules
+
+# Secrets
+.env
+
+# Compiled output
+site
+build
