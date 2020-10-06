@@ -36,23 +36,7 @@ $opensans: 'Open Sans', $helvetica;
 $roboto-condensed: 'Roboto Condensed', $helvetica;
 $roboto: 'Roboto', $helvetica;
 
-@font-face {
-	font-family: 'Roboto';
-	src: url('/fonts/roboto.woff2') format('woff2'),
-			 url('/fonts/roboto.woff') format('woff');
-	font-weight: 400;
-	font-style: normal;
-	font-display: fallback;
-}
-
-@font-face {
-	font-family: 'Roboto Condensed';
-	src: url('/fonts/roboto-condensed.woff2') format('woff2'),
-			 url('/fonts/roboto-condensed.woff') format('woff');
-	font-weight: 700;
-	font-style: normal;
-	font-display: fallback;
-}
+$font-family-sans-serif     : -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 
 

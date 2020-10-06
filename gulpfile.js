@@ -79,6 +79,68 @@ gulp.task('clean', function() {
     .pipe($.clean());
  });
 
+ gulp.task('build-js', function(cb) {
+  return gulp.src(settings.inputDir + '/js/entry.js')
+    .pipe(webpack({
+      mode: 'development',
+      output: {
+        filename: 'scripts.js',
+      }
+    }))
+    .pipe($.uglify().on('error', function(err) {
+      console.log(err.toString());
+      process.exit(1);
+    }))
+    .pipe(gulp.dest(settings.buildDir + '/js/'));
+});
+
+/**
+ * Dirty secret, we just need to copy them.
+ */
+gulp.task('build-fonts', function() {
+  return gulp.src(settings.inputDir + '/fonts/**/*.*')
+    .pipe(gulp.dest(settings.buildDir + '/fonts'))
+});
+
+/**
+ * Compile the Sass for development and inject into the browser.
+ */
+gulp.task('build-sass', function() {
+  return gulp.src(settings.inputDir + '/sass/**/*.scss')
+    .pipe($.sass({outputStyle: 'compressed'}))
+    .pipe($.autoprefixer('last 3 versions', '> 1%'))
+    .pipe(gulp.dest(settings.buildDir + '/css'));
+});
+
+/**
+ * Minify all of the images.
+ */
+gulp.task('build-images', function() {
+  return gulp.src(settings.inputDir + '/images/**/*')
+    .pipe($.changed(settings.buildDir + '/images'))
+    .pipe($.imagemin())
+    .pipe(gulp.dest(settings.buildDir + '/images'))
+    .pipe($.webp())
+    .pipe(gulp.dest(settings.buildDir + '/images'));
+});
+
+/**
+ * Compile the HTML to a single page.
+ */
+gulp.task('build-html', function() {
+  return gulp.src([settings.inputDir + '/*.html'])
+    .pipe($.fileInclude({
+      prefix: '@@',
+      basepath: settings.inputDir + '/templates/'
+    }))
+    .pipe($.htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest(settings.buildDir));
+});
+
+/**
+ * Build for production. Clean runs first, then will run the rest of the tasks.
+ */
+gulp.task('build', gulp.series('clean', gulp.parallel('build-fonts', 'build-sass', 'build-js', 'build-html', 'build-images')));
 
 
 /**

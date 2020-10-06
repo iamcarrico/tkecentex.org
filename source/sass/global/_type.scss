@@ -6,12 +6,11 @@ body {
   font-size: $base-font-size;
   line-height: $base-line-height;
   color: $black;
-  font-family: $roboto;
+  font-family: $font-family-sans-serif;
 }
 
 // Headings
 h1, h2, h3, h4, h5, h6 {
-  font-family: $roboto-condensed;
   font-weight: bold;
   color: $darker-red;
 }
@@ -20,7 +19,7 @@ h1 {
   font-size: 1.4em;
   text-align: center;
   margin-bottom: 1.5em;
-  text-transform: uppercase;
+  font-variant: small-caps;
 
   @media (min-width: 334px) {
     font-size: 1.8em;

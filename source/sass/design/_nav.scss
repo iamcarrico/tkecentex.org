@@ -3,7 +3,8 @@ $number-of-nav-items: 5;
 
 .nav {
   background-color: $darker-red;
-  height: $nav-item-height;
+  //height: $nav-item-height;
+  height: 50px;
   text-align: right;
   position: fixed;
   top: 0;
@@ -22,11 +23,17 @@ $number-of-nav-items: 5;
     padding: 6px 10px 0 0;
   }
 
-  .menuitem {
+  .menuitem,
+  .logo-view {
     height: $nav-item-height;
     padding-top: 6px;
-    margin: 0 7px;
+    margin: 0 10px;
     display: inline-block;
+    vertical-align: text-top;
+  }
+
+  .logo-view {
+    max-width: 100px;
   }
 
   $menu-collapse-size: 530px;
@@ -52,19 +59,11 @@ $number-of-nav-items: 5;
     }
 
     .logo-view {
-      position: absolute;
-      left: 25px;
-
-      .logo {
-        max-height: $number-of-nav-items * $nav-item-height;
-        width: auto;
-      }
+      display: none;
     }
 
     .menuitem {
       display: block;
-
-
 
       &.donation  {
         background-color: $america-blue;
@@ -85,10 +84,6 @@ $number-of-nav-items: 5;
 
   @media (min-width: $menu-collapse-size + 1) {
     .menu-mobile {
-      display: none;
-    }
-
-    .logo-view {
       display: none;
     }
 

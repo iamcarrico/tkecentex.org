@@ -1,0 +1,12 @@
+#dues {
+
+
+  .dues-container {
+    width: 100%;
+    display: flex;
+
+    &--left, &--right {
+      width: 50%;
+    }
+  }
+}
