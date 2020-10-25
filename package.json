@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nf start",
-    "dev": "nf start --procfile Procfile.dev",
+    "start": "gulp serve",
+    "dev": "gulp serve",
     "postinstall": "gulp build"
   },
   "repository": {
